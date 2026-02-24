@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0a0e27;
+  --gold: #d4af37;
+  --gold-light: #f0d060;
+  --gold-dark: #a07820;
+  --purple-cosmic: #2d1b69;
+  --purple-deep: #1a0f3e;
+  --purple-mid: #4a2c9e;
+  --star-white: #f0e6d3;
+  --star-dim: #8a7a6a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--navy);
+  color: var(--star-white);
+  font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Gold shimmer text effect */
+.gold-shimmer-text {
+  background: linear-gradient(
+    90deg,
+    var(--gold-dark) 0%,
+    var(--gold-light) 30%,
+    var(--gold) 50%,
+    var(--gold-light) 70%,
+    var(--gold-dark) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Glowing border */
+.glow-border {
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15), inset 0 0 15px rgba(212, 175, 55, 0.05);
+  transition: all 0.3s ease;
+}
+
+.glow-border:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.3), inset 0 0 25px rgba(212, 175, 55, 0.08);
+}
+
+/* Fortune card glass effect */
+.fortune-card {
+  background: linear-gradient(
+    135deg,
+    rgba(45, 27, 105, 0.5) 0%,
+    rgba(26, 15, 62, 0.7) 50%,
+    rgba(10, 14, 39, 0.85) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.fortune-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.06),
+    transparent
+  );
+  animation: cardShimmer 4s ease-in-out infinite;
+}
+
+@keyframes cardShimmer {
+  0% { left: -100%; }
+  50% { left: 150%; }
+  100% { left: 150%; }
+}
+
+/* Input styling */
+.mystical-input {
+  background: rgba(10, 14, 39, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--star-white);
+  transition: all 0.3s ease;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.mystical-input:focus {
+  outline: none;
+  border-color: rgba(212, 175, 55, 0.7);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1), 0 0 20px rgba(212, 175, 55, 0.15);
+  background: rgba(45, 27, 105, 0.3);
+}
+
+.mystical-input::placeholder {
+  color: rgba(240, 230, 211, 0.4);
+}
+
+/* Color input override */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(0deg);
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Button glow */
+.btn-reveal {
+  background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-light) 100%);
+  background-size: 200% auto;
+  color: var(--navy);
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-reveal:hover {
+  background-position: right center;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5), 0 0 60px rgba(212, 175, 55, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-reveal:active {
+  transform: translateY(0px);
+}
+
+.btn-reveal::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.btn-reveal:active::after {
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+}
+
+/* Star rating */
+.star-filled {
+  color: var(--gold);
+  filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.6));
+}
+
+.star-empty {
+  color: rgba(212, 175, 55, 0.2);
+}
+
+/* Lottery ball */
+.lottery-ball {
+  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.3), transparent 60%),
+              linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  box-shadow: 
+    inset -2px -2px 4px rgba(0, 0, 0, 0.3),
+    inset 1px 1px 3px rgba(255, 255, 255, 0.3),
+    0 4px 12px rgba(212, 175, 55, 0.4),
+    0 0 20px rgba(212, 175, 55, 0.15);
+  transition: all 0.3s ease;
+}
+
+.lottery-ball:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 
+    inset -2px -2px 4px rgba(0, 0, 0, 0.3),
+    inset 1px 1px 3px rgba(255, 255, 255, 0.3),
+    0 8px 20px rgba(212, 175, 55, 0.5),
+    0 0 30px rgba(212, 175, 55, 0.25);
+}
+
+/* Divider line */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.5;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.5);
+}
+
+/* Animated card stagger */
+.card-stagger-1 { animation-delay: 0.1s; }
+.card-stagger-2 { animation-delay: 0.25s; }
+.card-stagger-3 { animation-delay: 0.4s; }
+.card-stagger-4 { animation-delay: 0.55s; }
+
+/* Sacred geometry overlay */
+.sacred-geo {
+  position: absolute;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+/* Constellation lines */
+.constellation-line {
+  stroke: rgba(212, 175, 55, 0.15);
+  stroke-width: 0.5;
+  stroke-dasharray: 4 4;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .fortune-grid {
+    grid-template-columns: 1fr;
+  }
+}
